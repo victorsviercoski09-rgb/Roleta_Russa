@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Roleta Russa</title>
+        <link rel="stylesheet" href="roletaRussa.css">
+    </head>
+
+    <body>
+
+        <header id="cabecalho">
+            <h1>🎯 Jogo de Roleta Russa</h1>
+        </header>
+
+        <main class="principal">
+
+            <section class="status">
+                
+                <p id="status">Nova rodada começou! Escolha um número</p>
+            </section>
+
+            <section class="vidas">
+                <p id="vidas">👤 Você:❤️❤️❤️ 🤖 Bot:❤️❤️❤️</p>
+
+            </section>
+
+            <section class="acao">
+                <label for="escolhaUser">Escolha um número:</label><br>
+
+                <button id="b1" onclick="escolha(this,1)">1</button>
+                <button id="b2" onclick="escolha(this,2)">2</button>
+                <button id="b3" onclick="escolha(this,3)">3</button>
+                <button id="b4" onclick="escolha(this,4)">4</button>
+                <button id="b5" onclick="escolha(this,5)">5</button>
+                <button id="b6" onclick="escolha(this,6)">6</button>
+            </section>
+        </main>
+        <div id="efeito"></div>
+        <script src="roletaRussa.js"></script>
+    </body>
+</html>

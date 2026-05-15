@@ -1,0 +1,118 @@
+.hidden{
+    display: none;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at center, #1a1a1a, #000);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+#cabecalho {
+    background: #111;
+    padding: 20px;
+    box-shadow: 0 0 15px red;
+}
+
+#cabecalho h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+/* Área principal */
+.principal {
+    margin-top: 40px;
+}
+
+/* Status */
+.status {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* Vidas */
+.vidas {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Área de ação */
+.acao {
+    margin-top: 20px;
+}
+
+/* Botões */
+.acao button {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: #111;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover (tensão) */
+.acao button:hover {
+    background: crimson;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px red;
+}
+
+/* Botão clicado some */
+.hidden {
+    visibility: hidden;
+}
+
+/* Efeito quando toma tiro (usa no JS se quiser melhorar) */
+.tiro {
+    animation: flash 0.3s ease;
+}
+
+@keyframes flash {
+    0% { background: red; }
+    100% { background: #000; }
+}
+
+/* Texto de alerta */
+#status {
+    transition: 0.3s;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    .acao button {
+        width: 55px;
+        height: 55px;
+        font-size: 1.2rem;
+    }
+}
+
+#efeito{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease-out;
+}
+#efeito.ativo{
+    opacity: 0.6;
+}
